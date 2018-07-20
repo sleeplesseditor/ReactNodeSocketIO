@@ -4,7 +4,10 @@
   "description": "A demonstration of the use of SocketIO with React and Node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client-install": "npm install --prefix socket-io-client",
+    "server": "node app.js",
+    "client": "cd socket-io-client && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Josh Bryson",
   "license": "ISC",
@@ -12,5 +15,8 @@
     "axios": "^0.18.0",
     "express": "^4.16.3",
     "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.0"
   }
 }

@@ -8,3 +8,5 @@ To get this up and running, follow these steps:
 
 1) cd ReactNodeSocketIO
 2) npm install
+3) npm run client-install
+4) npm start
